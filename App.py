@@ -7,13 +7,13 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///C:/ProyectosDAW/ProyectoParcial
 
 db=SQLAlchemy(app)
 
-from modelo import Persona, CatalogoTramitante, CatalogoNivel, CatalogoMunicipio, CatalogoAsunto, Tramite, User
-
-try:
-    with app.app_context():
-        db.create_all()
-except Exception as e:
-    print("Error creating database tables:", e)
+# #En esta parte se crea la base de datos, solo se ejecuta una vez
+# from modelo import Persona, CatalogoTramitante, CatalogoNivel, CatalogoMunicipio, CatalogoAsunto, Tramite, User
+# try:
+#     with app.app_context():
+#         db.create_all()
+# except Exception as e:
+#     print("Error creating database tables:", e)
 
 from controlador import *
 
